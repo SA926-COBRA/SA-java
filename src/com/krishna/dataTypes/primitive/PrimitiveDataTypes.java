@@ -1,4 +1,4 @@
-package com.krishna.dataTypes;
+package com.krishna.dataTypes.primitive;
 
 public class PrimitiveDataTypes {
     public static void main(String[] args){
