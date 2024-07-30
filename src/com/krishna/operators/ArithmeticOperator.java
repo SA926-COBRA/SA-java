@@ -20,5 +20,9 @@ public class ArithmeticOperator {
         // Division /
         int division  = numberOne / numberTwo;
         System.out.println("The division of two numbers is : " + division);
+
+        // Modulus %
+        int remainder = numberOne % numberTwo;
+        System.out.println("The remainder between two numbers is : " + remainder);
     }
 }
