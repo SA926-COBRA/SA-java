@@ -1,0 +1,22 @@
+Shift Operators in Java
+
+1. Left Shift (`<<`)
+- Operation: Shifts all the bits in a number to the left by a specified number of positions.
+- Effect: The vacant positions on the right are filled with zeros.
+- Usage: Each shift to the left is equivalent to multiplying the number by 2.
+
+2. Right Shift (`>>`)
+- Operation: Shifts all the bits in a number to the right by a specified number of positions.
+- Effect: The vacant positions on the left are filled with the sign bit (0 for positive numbers, 1 for negative numbers).
+- Usage: Each shift to the right is equivalent to dividing the number by 2 (with sign extension).
+
+3. Unsigned Right Shift (`>>>`)
+- Operation: Shifts all the bits in a number to the right by a specified number of positions.
+- Effect: The vacant positions on the left are filled with zeros, regardless of the sign of the original number.
+- Usage: The result is always positive or zero.
+
+Summary of Shift Operators
+
+- Left Shift (`<<`): Shifts bits to the left, filling zeros on the right.
+- Right Shift (`>>`): Shifts bits to the right, filling with the sign bit (sign-extended right shift).
+- Unsigned Right Shift (`>>>`): Shifts bits to the right, filling zeros on the left (zero-filled right shift).
