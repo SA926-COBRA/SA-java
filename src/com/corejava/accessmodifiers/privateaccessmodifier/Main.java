@@ -6,7 +6,7 @@ public class Main {
     private static String name = "Riyanshi";
 
     public static void main(String[] args) {
-        // name can be accessed in here because it's in Main class
+        // name can be accessed in here because it's in MethodExample class
         System.out.println("My sisters name is : " + name);
     }
 }
