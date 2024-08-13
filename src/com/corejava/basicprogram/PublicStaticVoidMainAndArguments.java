@@ -2,7 +2,7 @@ package com.corejava.basicprogram;
 
 import java.util.Arrays;
 
-public class PublicStaticVoidMain {
+public class PublicStaticVoidMainAndArguments {
     public static void main(String[] args) {
         System.out.println("Program was given ");
         if (args.length > 0) {
