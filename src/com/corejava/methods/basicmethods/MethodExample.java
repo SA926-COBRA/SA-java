@@ -5,7 +5,7 @@ public class MethodExample {
         To be a method, it should have :
         - Access Modifier
         - 'static' keyword (Optional)
-        - Return Type ( void, int, String, double etc)
+        - Return Type ( void, int, String, double etc.)
         - Name (Method Name such as 'main')
         - Parameters such as inta, int b (Optional)
         - Method Body
