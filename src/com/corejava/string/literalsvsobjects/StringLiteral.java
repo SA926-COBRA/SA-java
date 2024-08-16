@@ -1,4 +1,4 @@
-package com.corejava.string.literal;
+package com.corejava.string.literalsvsobjects;
 
     public class StringLiteral {
         public static void main(String[] args) {

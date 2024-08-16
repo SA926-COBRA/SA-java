@@ -1,4 +1,4 @@
-package com.corejava.string;
+package com.corejava.string.string;
 
 public class HowStringStoresInMemory {
     public static void main(String[] args) {

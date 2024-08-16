@@ -1,4 +1,4 @@
-package com.corejava.string.object;
+package com.corejava.string.literalsvsobjects;
 
 public class StringObject {
     public static void main(String[] args) {
