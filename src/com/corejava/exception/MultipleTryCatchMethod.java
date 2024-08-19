@@ -4,6 +4,7 @@ public class MultipleTryCatchMethod {
     public static void main(String[] args) {
         try {
             int number = Integer.parseInt("1");
+//            int number = Integer.parseInt("1x");
             System.out.println(number);
 
             for (int i = 10; i <= 10; i--) {
