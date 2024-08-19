@@ -6,7 +6,7 @@ public class MultipleTryCatchMethod {
             int number = Integer.parseInt("1");
             System.out.println(number);
 
-            for (int i = 10; i >= 10; i--) {
+            for (int i = 10; i <= 10; i--) {
                 System.out.println(10 / i);
             }
 
