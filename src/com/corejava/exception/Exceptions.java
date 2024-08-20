@@ -1,6 +1,6 @@
 package com.corejava.exception;
 
-public class Exception {
+public class Exceptions extends Throwable {
     public static void main(String[] args) {
 
         System.out.println();
