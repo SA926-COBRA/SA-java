@@ -1,4 +1,4 @@
-package com.corejava.exception;
+package com.corejava.exception.unchecked;
 
 public class Exceptions extends Throwable {
     public static void main(String[] args) {
