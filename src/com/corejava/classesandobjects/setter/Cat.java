@@ -7,7 +7,7 @@ public class Cat {
         System.out.println(name + ": meow...");
     }
 
-    public void setname(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
