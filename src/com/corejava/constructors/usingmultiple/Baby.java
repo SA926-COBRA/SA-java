@@ -20,10 +20,15 @@ public class Baby {
         this.age = 0;
     }
 
+    // Parameterized Constructor with some parameters
+    public Baby(String gender, String name) {
+        this(gender);
+        this.name = name;
+    }
+
     // Parameterized Constructor with all parameters
     public Baby(String gender, String name, int age) {
-        this.gender = gender;
-        this.name = name;
+        this(gender, name);
         this.age = age;
     }
 
