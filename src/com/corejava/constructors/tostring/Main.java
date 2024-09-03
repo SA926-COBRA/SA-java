@@ -23,5 +23,11 @@ public class Main {
 
         String[] names = {"Riyanshi", "Sangita", "Pabitra", "Janaki"};
         System.out.println(Arrays.toString(names));
+
+        FamilyMembers newFamily2 = new FamilyMembers("Shyam", 20, "Male");
+        FamilyMembers newFamily3 = new FamilyMembers("Shyam", 20, "Male");
+
+        System.out.println(newFamily2 == newFamily3);
+        System.out.println(newFamily2.equals(newFamily3));
     }
 }

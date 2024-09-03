@@ -1,5 +1,7 @@
 package com.corejava.constructors.tostring;
 
+import java.util.Objects;
+
 public class FamilyMembers {
 
     private String name;
@@ -38,5 +40,18 @@ public class FamilyMembers {
 
     public String toString() {
         return "Name: " + name + " Age: " + age + " Gender: " + gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FamilyMembers that = (FamilyMembers) o;
+        return age == that.age && Objects.equals(name, that.name) && Objects.equals(gender, that.gender);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, gender);
     }
 }
