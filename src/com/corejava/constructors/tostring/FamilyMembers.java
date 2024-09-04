@@ -44,10 +44,14 @@ public class FamilyMembers {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         FamilyMembers that = (FamilyMembers) o;
-        return age == that.age && Objects.equals(name, that.name) && Objects.equals(gender, that.gender);
+        return age == that.age &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(gender, that.gender);
     }
 
     @Override
