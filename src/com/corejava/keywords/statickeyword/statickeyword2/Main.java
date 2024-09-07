@@ -1,4 +1,4 @@
-package com.corejava.keywords.statickeyword2;
+package com.corejava.keywords.statickeyword.statickeyword2;
 
 import java.math.BigDecimal;
 

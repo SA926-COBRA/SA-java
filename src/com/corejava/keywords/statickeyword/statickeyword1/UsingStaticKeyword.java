@@ -1,4 +1,4 @@
-package com.corejava.keywords.statickeyword;
+package com.corejava.keywords.statickeyword.statickeyword1;
 
 public class UsingStaticKeyword {
     // Static Variable
