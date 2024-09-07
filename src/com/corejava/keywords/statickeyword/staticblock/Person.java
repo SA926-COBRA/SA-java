@@ -7,9 +7,17 @@ public class Person {
     private String name;
     private int age;
 
+    // Static block: runs only once when the class is loaded
     static {
         type = "Person";
         System.out.println("From Static Block!!");
+    }
+
+    // Instance initializer block: runs before every constructor call
+    {
+        System.out.println("From Instance Initializer Block!!");
+        name = "Unknown"; // Default value for name
+        age = 0;          // Default value for age
     }
 
     public Person() {

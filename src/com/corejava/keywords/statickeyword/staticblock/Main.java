@@ -9,5 +9,8 @@ public class Main {
         );
 
         System.out.println(naresh);
+
+        Person anotherPerson = new Person("Krishna", 25);
+        System.out.println(anotherPerson);
     }
 }
