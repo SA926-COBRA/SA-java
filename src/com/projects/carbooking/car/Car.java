@@ -11,6 +11,7 @@ public class Car {
     public Car() {
     }
 
+    // Constructor with all fields
     public Car(String regNumber, CarBrand carBrand, boolean isElectric, boolean isAvailable) {
         this.regNumber = regNumber;
         this.carBrand = carBrand;
@@ -18,6 +19,15 @@ public class Car {
         this.isAvailable = isAvailable;
     }
 
+    // Constructor without availability (can be set separately)
+    public Car(String regNumber, CarBrand carBrand, boolean isElectric) {
+        this.regNumber = regNumber;
+        this.carBrand = carBrand;
+        this.isElectric = isElectric;
+        this.isAvailable = true;  // Default to available
+    }
+
+    // Getters and Setters
     public String getRegNumber() {
         return regNumber;
     }
@@ -50,12 +60,16 @@ public class Car {
         isAvailable = available;
     }
 
+    // Equals and HashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return isElectric == car.isElectric && isAvailable == car.isAvailable && Objects.equals(regNumber, car.regNumber) && carBrand == car.carBrand;
+        return isElectric == car.isElectric &&
+                isAvailable == car.isAvailable &&
+                Objects.equals(regNumber, car.regNumber) &&
+                carBrand == car.carBrand;
     }
 
     @Override
@@ -63,6 +77,7 @@ public class Car {
         return Objects.hash(regNumber, carBrand, isElectric, isAvailable);
     }
 
+    // ToString
     @Override
     public String toString() {
         return "Car{" +

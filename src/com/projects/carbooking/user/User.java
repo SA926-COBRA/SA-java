@@ -3,24 +3,24 @@ package com.projects.carbooking.user;
 import java.util.Objects;
 
 public class User {
-    private int id;     // auto generated
+    private String id;     // auto generated
     private String name;
     private String email;
 
     public User() {
     }
 
-    public User(int id, String name, String email) {
+    public User(String id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -45,7 +45,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(name, user.name) && Objects.equals(email, user.email);
+        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(email, user.email);
     }
 
     @Override
