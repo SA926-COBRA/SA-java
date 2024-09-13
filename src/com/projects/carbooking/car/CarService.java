@@ -55,4 +55,14 @@ public class CarService {
         System.out.println("Car with registration number " + regNum + " is not found.");
         return false;
     }
+
+    public Car getCarByRegistration(String regNum) {
+        for (Car car : cars) {
+            if (car != null && car.getRegNumber().equals(regNum)) {
+                return car;
+            }
+        }
+        return null;
+    }
 }
+
