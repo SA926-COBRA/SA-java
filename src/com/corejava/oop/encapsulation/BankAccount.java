@@ -1,6 +1,7 @@
 package com.corejava.oop.encapsulation;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import static java.math.BigDecimal.ZERO;
 
@@ -32,5 +33,43 @@ public class BankAccount {
 
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isHasOverdraft() {
+        return hasOverdraft;
+    }
+
+    public void setHasOverdraft(boolean hasOverdraft) {
+        this.hasOverdraft = hasOverdraft;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BankAccount that = (BankAccount) o;
+        return hasOverdraft == that.hasOverdraft && Objects.equals(name, that.name) && Objects.equals(balance, that.balance);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, balance, hasOverdraft);
+    }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "name='" + name + '\'' +
+                ", balance=" + balance +
+                ", hasOverdraft=" + hasOverdraft +
+                '}';
     }
 }
