@@ -3,10 +3,10 @@ package com.corejava.oop.inheritance;
 import java.util.Objects;
 
 public class Employee {
-    private String name;
-    private int age;
-    private String address;
-    private String experience;
+    protected String name;
+    protected int age;
+    protected String address;
+    protected String experience;
 
     public Employee() {
     }
