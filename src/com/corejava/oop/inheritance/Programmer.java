@@ -20,4 +20,9 @@ public class Programmer extends Employee {
         super.sayHi();
         System.out.println(this.name + ": Writing some code.");
     }
+
+    @Override
+    public void sayHi() {
+        System.out.println("Hello World");
+    }
 }

@@ -10,6 +10,8 @@ public class Main {
                 "London",
                 "Full Stack"
         );
+        java.sayHi();
+
         java.writeSomeCode();
         System.out.println(java.getName());
         System.out.println(java.getAddress());
