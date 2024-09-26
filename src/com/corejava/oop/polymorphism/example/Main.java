@@ -23,5 +23,9 @@ public class Main {
         }
 
         System.out.println("Purchase Rate " + Vehicle.PURCHASE_RATE);
+
+        System.out.println(car.milesToKilometers());
+
+        System.out.println(car.KilometersToMiles());
     }
 }
