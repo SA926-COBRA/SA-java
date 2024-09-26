@@ -6,6 +6,9 @@ public interface Vehicle {
     // 2. Abstract Methods
     // 3. Default Methods
 
+    // Constants
+    Double PURCHASE_RATE = 0.05;
+
     // Abstract Methods
     void move(int amount);
 

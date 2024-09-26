@@ -1,5 +1,7 @@
 package com.corejava.oop.polymorphism.example;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         Car car = new Car();
@@ -19,5 +21,7 @@ public class Main {
             System.out.println(vehicle.getCurrentSpeed());
             System.out.println();
         }
+
+        System.out.println("Purchase Rate " + Vehicle.PURCHASE_RATE);
     }
 }
