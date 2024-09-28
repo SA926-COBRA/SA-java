@@ -1,6 +1,6 @@
 package com.corejava.solid;
 
-public class Square {
+public class Square implements Shape {
     private final int length;
 
     public Square(int length) {
@@ -9,5 +9,10 @@ public class Square {
 
     public int getLength() {
         return length;
+    }
+
+    @Override
+    public double are() {
+        return Math.pow(getLength(), 2);
     }
 }
