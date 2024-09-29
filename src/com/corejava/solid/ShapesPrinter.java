@@ -3,11 +3,21 @@ package com.corejava.solid;
 import java.util.List;
 
 public class ShapesPrinter {
-    public String json(int sum) {
-        return "{ShapesSUm: %s}".formatted(sum);
+    private final IAreaCalculator areaCalculator;
+
+    public ShapesPrinter(IAreaCalculator areaCalculator) {
+        this.areaCalculator = areaCalculator;
     }
 
-    public String csv(int sum) {
-        return "shapes_sum, %s".formatted(sum);
+    public String json(List<Shape> shapes) {
+        return "{ShapesSUm: %s}".formatted(
+                areaCalculator.sum(shapes)
+        );
+    }
+
+    public String csv(List<Shape> shapes) {
+        return "shapes_sum, %s".formatted(
+                areaCalculator.sum(shapes)
+        );
     }
 }

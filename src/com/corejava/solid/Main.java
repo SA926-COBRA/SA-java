@@ -4,10 +4,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        AreaCalculator areaCalculator = new AreaCalculator();
+        IAreaCalculator areaCalculator = new AreaCalculator();
+        IAreaCalculator areaCalculatorV2 = new AreaCalculatorV2();
         Circle circle = new Circle(10);
         Square square = new Square(10);
-        ShapesPrinter printer = new ShapesPrinter();
+        ShapesPrinter printer = new ShapesPrinter(
+                areaCalculatorV2
+        );
         Cube cube = new Cube();
         Rectangle rectangle = new Rectangle();
 //        Shape noShape = new NoShape();
@@ -20,8 +23,8 @@ public class Main {
                 rectangle
         );
         int sum = areaCalculator.sum(shapes);
-        System.out.println(printer.json(sum));
-        System.out.println(printer.csv(sum));
+        System.out.println(printer.json(shapes));
+        System.out.println(printer.csv(shapes));
 
     }
 }
