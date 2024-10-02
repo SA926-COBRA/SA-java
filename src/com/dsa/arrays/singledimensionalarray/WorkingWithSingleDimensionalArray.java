@@ -1,8 +1,8 @@
-package com.dsa.arrays.basic;
+package com.dsa.arrays.singledimensionalarray;
 
 import java.util.Arrays;
 
-public class TheArrays {
+public class WorkingWithSingleDimensionalArray {
     public static void main(String[] args) {
         // Declaring an array of Strings with 5 Elements
         String[] colors = new String[5];
