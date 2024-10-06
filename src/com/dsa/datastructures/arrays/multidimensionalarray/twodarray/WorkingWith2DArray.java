@@ -1,4 +1,4 @@
-package com.dsa.arrays.multidimensionalarray.twodarray;
+package com.dsa.datastructures.arrays.multidimensionalarray.twodarray;
 
 import java.util.Arrays;
 

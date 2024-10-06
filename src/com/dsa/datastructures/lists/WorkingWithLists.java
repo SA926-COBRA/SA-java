@@ -1,4 +1,4 @@
-package com.dsa.lists;
+package com.dsa.datastructures.lists;
 
 import java.util.ArrayList;
 import java.util.List;

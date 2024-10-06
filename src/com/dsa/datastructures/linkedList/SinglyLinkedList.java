@@ -1,4 +1,4 @@
-package com.dsa.linkedList;
+package com.dsa.datastructures.linkedList;
 
 public class SinglyLinkedList {
     public static void main(String[] args) {

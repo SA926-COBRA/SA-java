@@ -1,4 +1,4 @@
-package com.dsa.linkedList;
+package com.dsa.datastructures.linkedList;
 
 import java.util.LinkedList;
 import java.util.ListIterator;

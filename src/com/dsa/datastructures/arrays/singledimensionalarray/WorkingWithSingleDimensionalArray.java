@@ -1,4 +1,4 @@
-package com.dsa.arrays.singledimensionalarray;
+package com.dsa.datastructures.arrays.singledimensionalarray;
 
 import java.util.Arrays;
 
