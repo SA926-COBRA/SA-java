@@ -12,8 +12,17 @@ public class GenericType {
         List<String> names = new ArrayList<String>();
         List<Integer> numbers = new ArrayList<Integer>();
 
+//      Map<K, V>
         Map<String, String> map = new HashMap<>();
         Map<Point, Double> map2 = new HashMap<>();
 
+        /*
+            Naming Convention
+            E - Element (Used extensively by the Java)
+            K - Key (Used in Map)
+            N - Number
+            T - Type
+            V - Value
+         */
     }
 }
