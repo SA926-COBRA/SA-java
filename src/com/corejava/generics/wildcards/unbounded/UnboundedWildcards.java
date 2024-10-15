@@ -1,4 +1,4 @@
-package com.corejava.generics.wildcards;
+package com.corejava.generics.wildcards.unbounded;
 
 import java.util.Arrays;
 import java.util.Date;
