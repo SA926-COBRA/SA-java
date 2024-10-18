@@ -3,18 +3,18 @@ package com.projects.carbooking.user;
 import java.util.UUID;
 
 public class UserService {
-    private User[] users = new User[100];  // Example array size
-    private int userCount = 0;
+    private final UserDao userDao = new UserDao();
 
-    public User createUser(String name, String email) {
-        String userId = UUID.randomUUID().toString();  // Generate a unique user ID using UUID
-        User newUser = new User(userId, name, email);
-        users[userCount] = newUser;
-        userCount++;
-        return newUser;
+    public User[] getUsers() {
+        return userDao.getUsers();
     }
 
-    public User[] getAllUsers() {
-        return users;
+    public User getUserById(UUID id) {
+        for (User user : getUsers()) {
+            if (user.getId().equals(id)) {
+                return user;
+            }
+        }
+        return null;
     }
 }
