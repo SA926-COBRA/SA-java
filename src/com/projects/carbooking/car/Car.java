@@ -1,33 +1,22 @@
 package com.projects.carbooking.car;
 
 import java.util.Objects;
+import java.math.BigDecimal;
 
 public class Car {
-    private String regNumber;       // Unique for each car
-    private CarBrand carBrand;
+    private String regNumber;
+    private BigDecimal rentalPricePerDay;
+    private Brand brand;
+
     private boolean isElectric;
-    private boolean isAvailable;
 
-    public Car() {
-    }
-
-    // Constructor with all fields
-    public Car(String regNumber, CarBrand carBrand, boolean isElectric, boolean isAvailable) {
+    public Car(String regNumber, BigDecimal rentalPricePerDay, Brand brand, boolean isElectric) {
         this.regNumber = regNumber;
-        this.carBrand = carBrand;
+        this.rentalPricePerDay = rentalPricePerDay;
+        this.brand = brand;
         this.isElectric = isElectric;
-        this.isAvailable = isAvailable;
     }
 
-    // Constructor without availability (can be set separately)
-    public Car(String regNumber, CarBrand carBrand, boolean isElectric) {
-        this.regNumber = regNumber;
-        this.carBrand = carBrand;
-        this.isElectric = isElectric;
-        this.isAvailable = true;  // Default to available
-    }
-
-    // Getters and Setters
     public String getRegNumber() {
         return regNumber;
     }
@@ -36,12 +25,20 @@ public class Car {
         this.regNumber = regNumber;
     }
 
-    public CarBrand getCarBrand() {
-        return carBrand;
+    public BigDecimal getRentalPricePerDay() {
+        return rentalPricePerDay;
     }
 
-    public void setCarBrand(CarBrand carBrand) {
-        this.carBrand = carBrand;
+    public void setRentalPricePerDay(BigDecimal rentalPricePerDay) {
+        this.rentalPricePerDay = rentalPricePerDay;
+    }
+
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
     }
 
     public boolean isElectric() {
@@ -52,39 +49,21 @@ public class Car {
         isElectric = electric;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    @Override
+    public String toString() {
+        return "Car{" + "regNumber='" + regNumber + '\'' + ", rentalPricePerDay=" + rentalPricePerDay + ", brand=" + brand + ", isElectric=" + isElectric + '}';
     }
 
-    public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
-
-    // Equals and HashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return isElectric == car.isElectric &&
-                isAvailable == car.isAvailable &&
-                Objects.equals(regNumber, car.regNumber) &&
-                carBrand == car.carBrand;
+        return isElectric == car.isElectric && Objects.equals(regNumber, car.regNumber) && Objects.equals(rentalPricePerDay, car.rentalPricePerDay) && brand == car.brand;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(regNumber, carBrand, isElectric, isAvailable);
-    }
-
-    // ToString
-    @Override
-    public String toString() {
-        return "Car{" +
-                "regNumber='" + regNumber + '\'' +
-                ", carBrand=" + carBrand +
-                ", isElectric=" + isElectric +
-                ", isAvailable=" + isAvailable +
-                '}';
+        return Objects.hash(regNumber, rentalPricePerDay, brand, isElectric);
     }
 }

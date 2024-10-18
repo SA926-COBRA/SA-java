@@ -1,10 +1,13 @@
 package com.projects.carbooking.car;
 
-public enum CarBrand {
+public enum Brand {
     TESLA,
     FERRARI,
     BUGATTI,
     THAR,
     ROLLSROYCE,
-    LAMBORGHINI
+    LAMBORGHINI,
+    AUDi,
+    VW,
+    MERCEDES,
 }
