@@ -10,15 +10,29 @@ public class WorkingWithStreams {
 
     @Test
     void streams() {
+        // Sample list of names
         List<String> names = List.of("Krishna", "Harry", "Ram");
+
+        // Creating a stream from the list of names
         Stream<String> stream = names.stream();
 
+        // Creating a stream using Stream.of
         Stream<String> namesStream = Stream.of("Krishna", "Harry", "Ram");
 
-        long count = stream.limit(2).map(null).sorted(null).dropWhile(null).count();
+        // Count the first two names, map to uppercase, sort, and count
+        long count = stream.limit(2)
+                .map(String::toUpperCase)  // Convert to uppercase
+                .sorted()                   // Sort the names
+                .count();
 
-        String[] namesArray = {};
+        // Print the count
+        System.out.println("Count of names: " + count);
 
-        Arrays.stream(namesArray);
+        // Example array of names
+        String[] namesArray = {"Krishna", "Harry", "Ram"};
+
+        // Create a stream from the names array
+        Arrays.stream(namesArray)
+                .forEach(System.out::println); // Print each name in the array
     }
 }
