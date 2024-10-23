@@ -1,4 +1,4 @@
-package com.dsa.datastructures.hashmap;
+package com.dsa.datastructures.nonlinear.hashmap;
 
 
 import java.util.HashMap;

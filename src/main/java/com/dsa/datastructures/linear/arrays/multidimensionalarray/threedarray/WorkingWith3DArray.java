@@ -1,4 +1,4 @@
-package com.dsa.datastructures.arrays.multidimensionalarray.threedarray;
+package com.dsa.datastructures.linear.arrays.multidimensionalarray.threedarray;
 
 public class WorkingWith3DArray {
     public static void main(String[] args) {

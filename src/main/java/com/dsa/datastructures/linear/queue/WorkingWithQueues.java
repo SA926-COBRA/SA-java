@@ -1,4 +1,4 @@
-package com.dsa.datastructures.queue;
+package com.dsa.datastructures.linear.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

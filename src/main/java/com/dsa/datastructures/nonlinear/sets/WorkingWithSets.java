@@ -1,4 +1,4 @@
-package com.dsa.datastructures.sets;
+package com.dsa.datastructures.nonlinear.sets;
 
 import java.util.HashSet;
 import java.util.Objects;

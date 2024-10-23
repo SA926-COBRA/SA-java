@@ -1,4 +1,4 @@
-package com.dsa.datastructures.maps;
+package com.dsa.datastructures.nonlinear.maps;
 
 import java.util.TreeMap;
 import java.util.Map;
