@@ -1,9 +1,28 @@
-### IntelliJ IDEA ###
-out/
+# Ignore compiled class files
+*.class
+
+# Ignore log files
+*.log
+# Spring Boot specific logs
+spring.log
+application.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files
+*.swp
+*~
+
+# IntelliJ IDEA
+/.idea/
+/*.iml
+/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -11,50 +30,32 @@ out/
 .settings
 .springBeans
 .sts4-cache
-bin/
+/bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
-.DS_Store
-
-# Ignore compiled class files
-*.class
-
-# Ignore log files
-*.log
-
-# Ignore IntelliJ project-specific files
-/.idea/
-/*.iml
-/out/
-
-# Ignore Maven target directory
+# Maven
 /target/
 
-# Ignore Gradle build directory
+# Gradle
 /build/
 
-# Ignore temporary files
-*.swp
-*~
+# Spring Boot specific
+/.spring/
+*.jar
+*.war
 
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
-
-# Ignore other IDE-specific files
-.vscode/
+# Miscellaneous IDE-specific files
 .project
 .classpath
 .cproject
