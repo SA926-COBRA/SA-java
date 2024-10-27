@@ -1,8 +1,9 @@
-package com.springboot;
+package com.springboot.myfirstapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,10 +15,12 @@ public class Main {
         SpringApplication.run(Main.class, args);
     }
 
-    @GetMapping("/")
-    public GreetResponse greet() {
+    @GetMapping("/greet")
+    public GreetResponse greet(
+            @RequestParam(value = "name", required = false) String name) {
+        String greetMessage = name == null || name.isBlank() ? "Hello" : "Hello " + name;
         GreetResponse response = new GreetResponse(
-                "Hello",
+                greetMessage,
                 List.of("Java", "Python", "Rubi", "C++", "C"),
                 new Person("Krishna", 21, 1300.21)
         );
