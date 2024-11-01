@@ -28,10 +28,20 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(Customers);
+//        System.out.println(Customers);
         SpringApplication.run(Main.class, args);
     }
 
+    /*@RequestMapping(
+            path = "api/v1/customers",
+            method = RequestMethod.GET
+    )
+    */
+
+    @GetMapping("/api/v1/customers")
+    public List<Customer> getCustomers() {
+        return Customers;
+    }
 
     static class Customer {
         private Integer id;
