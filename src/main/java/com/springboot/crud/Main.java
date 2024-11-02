@@ -2,10 +2,7 @@ package com.springboot.crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +39,15 @@ public class Main {
     public List<Customer> getCustomers() {
         return Customers;
     }
+
+    @GetMapping("/api/v1/customers/{customerId}")
+    public Customer getCustomer(@PathVariable("customerId") Integer customerId) {
+        return Customers.stream()
+                .filter(c -> c.getId().equals(customerId))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Customer with id [%s] not found".formatted(customerId)));
+    }
+
 
     static class Customer {
         private Integer id;
