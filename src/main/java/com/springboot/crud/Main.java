@@ -1,124 +1,25 @@
 package com.springboot.crud;
 
+import com.springboot.crud.customer.CustomerController;
+import com.springboot.crud.customer.CustomerDataAccessService;
+import com.springboot.crud.customer.CustomerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 @SpringBootApplication
-@RestController
 public class Main {
 
-
-    //db
-    private static List<Customer> Customers;
-
-    static {
-        Customers = new ArrayList<>();
-        Customers.add(new Customer(1, "Alex", "alex@gmail.com", 21));
-        Customers.add(new Customer(2, "John", "john@gmail.com", 25));
-        Customers.add(new Customer(3, "Sam", "sam@gmail.com", 31));
-        Customers.add(new Customer(4, "Will", "will@gmail.com", 28));
-    }
-
     public static void main(String[] args) {
+
+        /*
+        Never Do this
+        CustomerService customerService =
+                new CustomerService(new CustomerDataAccessService());
+        CustomerController customerController =
+                new CustomerController(customerService);
+        */
+
 //        System.out.println(Customers);
         SpringApplication.run(Main.class, args);
-    }
-
-    /*@RequestMapping(
-            path = "api/v1/customers",
-            method = RequestMethod.GET
-    )
-    */
-
-    @GetMapping("/api/v1/customers")
-    public List<Customer> getCustomers() {
-        return Customers;
-    }
-
-    @GetMapping("/api/v1/customers/{customerId}")
-    public Customer getCustomer(@PathVariable("customerId") Integer customerId) {
-        return Customers.stream()
-                .filter(c -> c.getId().equals(customerId))
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Customer with id [%s] not found".formatted(customerId)));
-    }
-
-
-    static class Customer {
-        private Integer id;
-        private String name;
-        private String email;
-        private int age;
-
-        public Customer() {
-        }
-
-        public Customer(Integer id, String name, String email, int age) {
-            this.id = id;
-            this.name = name;
-            this.email = email;
-            this.age = age;
-        }
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Customer customer = (Customer) o;
-            return age == customer.age && Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(email, customer.email);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(id, name, email, age);
-        }
-
-        @Override
-        public String toString() {
-            return "Customer{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
-                    ", email='" + email + '\'' +
-                    ", age=" + age +
-                    '}';
-        }
     }
 }
