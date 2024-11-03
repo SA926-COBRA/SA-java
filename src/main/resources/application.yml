@@ -4,5 +4,17 @@ server:
     include-message: always
 
 spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/customer
+    username: krishna
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
   main:
     web-application-type: servlet
