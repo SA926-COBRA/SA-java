@@ -19,8 +19,11 @@ public class Customer {
     )
 
     private Integer id;
-    private String name;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
     private int age;
 
     public Customer() {
