@@ -39,7 +39,7 @@ public class CustomerService {
         // if not add
         Customer customer = new Customer(
                 customerRegistrationRequest.name(),
-                customerRegistrationRequest.email()
+                customerRegistrationRequest.email(),
                 customerRegistrationRequest.age()
         );
         customerDao.insertCustomer(customer);
