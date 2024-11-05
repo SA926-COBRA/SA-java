@@ -8,4 +8,5 @@ public interface CustomerDao {
 
     Optional<Customer> selectCustomerById(Integer id);
 
+    void insertCustomer(Customer customer);
 }
