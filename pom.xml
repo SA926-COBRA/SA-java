@@ -10,11 +10,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.springboot</groupId>
+    <groupId>com.krishna</groupId>
     <artifactId>java</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>java-spring-boot-project</name>
-    <description>Combined Java and Spring Boot Project</description>
+    <name>java-project</name>
+    <description>Java Project</description>
 
     <properties>
         <!-- Set Java version to 21 for both Maven and Spring Boot -->
@@ -25,18 +25,6 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Web Dependency -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- Spring Boot Test Dependency -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Java Faker Dependency -->
         <dependency>
@@ -53,11 +41,6 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin for Spring Boot projects -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
