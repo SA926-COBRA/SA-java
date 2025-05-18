@@ -11,3 +11,5 @@ public class MyFirstTest {
 
     }
 }
+
+//This is a simple JUnit test class with two test methods.
